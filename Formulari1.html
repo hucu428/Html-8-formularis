@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulari d'Inscripció - Torneig de Videojocs</title>
+  <!-- Enllaç al full d'estil extern -->
+  <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+
+  <h1>Inscripció al Torneig de Videojocs</h1>
+  <form action="processa_inscripcio.php" method="post" enctype="multipart/form-data">
+
+    <!-- Camp de text -->
+    <label for="nom">Nom del participant:</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <!-- Camp de contrasenya -->
+    <label for="contrasenya">Contrasenya d'accés:</label>
+    <input type="password" id="contrasenya" name="contrasenya" required>
+
+    <!-- Radiobutton: plataforma preferida -->
+    <label>Plataforma preferida:</label>
+    <input type="radio" id="pc" name="plataforma" value="PC" checked>
+    <label for="pc">PC</label>
+    <input type="radio" id="ps5" name="plataforma" value="PS5">
+    <label for="ps5">PS5</label>
+    <input type="radio" id="xbox" name="plataforma" value="Xbox">
+    <label for="xbox">Xbox</label>
+
+    <!-- Checkbox: gèneres preferits -->
+    <label>Gèneres preferits:</label>
+    <input type="checkbox" id="fps" name="genere[]" value="FPS">
+    <label for="fps">FPS</label>
+    <input type="checkbox" id="rpg" name="genere[]" value="RPG">
+    <label for="rpg">RPG</label>
+    <input type="checkbox" id="esports" name="genere[]" value="eSports">
+    <label for="esports">eSports</label>
+
+    <!-- Camp fitxer adjunt -->
+    <label for="avatar">Puja el teu avatar:</label>
+    <input type="file" id="avatar" name="avatar" accept="image/*">
+
+    <!-- Camp ocult -->
+    <input type="hidden" name="torneig_id" value="VG2025">
+
+    <!-- Botó d'enviament -->
+    <input type="submit" value="Enviar inscripció">
+
+    <!-- Botó de reinici -->
+    <input type="reset" value="Esborra dades">
+
+    <!-- Botó per desar canvis -->
+    <input type="button" value="Desar canvis" onclick="alert('Canvis desats temporalment!')">
+
+    <!-- Camp imatge (botó amb imatge) -->
+    <label>Enviar mitjançant imatge:</label>
+    <input type="image" src="https://cdn-icons-png.flaticon.com/512/1828/1828925.png" alt="Enviar" width="50">
+
+  </form>
+
+</body>
+</html>
