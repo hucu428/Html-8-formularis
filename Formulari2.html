@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripció - Developers Conference</title>
+  <link rel="stylesheet" href="estils2.css">
+</head>
+<body>
+  <header>
+    <h1>Developers Conference</h1>
+  </header>
+
+  <form action="registre.php" method="post">
+    <!-- Dades de l'usuari -->
+    <fieldset>
+      <legend>Dades de l'usuari</legend>
+
+      <label for="nom">Nom*:</label>
+      <input type="text" id="nom" name="nom" required autofocus placeholder="Escriu el teu nom">
+
+      <label for="cognoms">Cognoms*:</label>
+      <input type="text" id="cognoms" name="cognoms" required placeholder="Escriu els teus cognoms">
+
+      <label for="nif">NIF*:</label>
+      <input type="text" id="nif" name="nif" required pattern="[0-9]{8}[A-Za-z]{1}" placeholder="12345678A">
+
+      <label for="data_naixement">Data de naixement:</label>
+      <input type="date" id="data_naixement" name="data_naixement">
+
+      <label for="sexe">Sexe:</label>
+      <select id="sexe" name="sexe">
+        <option value="">--Selecciona--</option>
+        <option value="home">Home</option>
+        <option value="dona">Dona</option>
+        <option value="altres">Altres</option>
+      </select>
+
+      <label for="adreca">Adreça:</label>
+      <input type="text" id="adreca" name="adreca">
+
+      <label for="telefon">Telèfon:</label>
+      <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="123456789">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="usuari@exemple.com">
+
+      <label for="web">Adreça web:</label>
+      <input type="url" id="web" name="web" placeholder="https://exemple.com">
+    </fieldset>
+
+    <!-- Dades de la inscripció -->
+    <fieldset>
+      <legend>Dades de la inscripció</legend>
+
+      <table>
+        <colgroup>
+          <col style="background-color:#eef;">
+          <col span="3">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Matí</th>
+            <th>Tarda</th>
+            <th>Vespre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dilluns</td>
+            <td>Python</td>
+            <td>Java</td>
+            <td>PHP</td>
+          </tr>
+          <tr>
+            <td>Dimarts</td>
+            <td>HTML5 i CSS3</td>
+            <td>Spring Boot</td>
+            <td>Laravel</td>
+          </tr>
+          <tr>
+            <td>Dimecres</td>
+            <td>Machine Learning</td>
+            <td>Node.js</td>
+            <td>Docker</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">* Els horaris poden canviar</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <label for="dia">Selecciona el dia per inscriure’t:</label>
+      <select id="dia" name="dia">
+        <option value="">--Selecciona un dia--</option>
+        <option value="dilluns">Dilluns</option>
+        <option value="dimarts">Dimarts</option>
+        <option value="dimecres">Dimecres</option>
+      </select>
+
+      <p>Llenguatges que domines:</p>
+      <label><input type="checkbox" name="skills" value="Python"> Python</label>
+      <label><input type="checkbox" name="skills" value="Java"> Java</label>
+      <label><input type="checkbox" name="skills" value="C#"> C#</label>
+      <label><input type="checkbox" name="skills" value="PHP"> PHP</label>
+    </fieldset>
+
+    <input type="image" src="enviar.png" alt="Enviar" width="100">
+  </form>
+
+  <footer>
+    <p>&copy; 2025 Developers Conference</p>
+  </footer>
+</body>
+</html>
